@@ -1,5 +1,7 @@
+import javax.swing.JFrame;
 
-public class Peliculas extends Categorias{
+
+public class Peliculas extends Categorias {
 
 	private final int ID;
 	private String Nombre;
@@ -7,7 +9,8 @@ public class Peliculas extends Categorias{
 	private static int id=0;
 	
 	
-	public Peliculas() {
+	
+   Peliculas() {
 		super();
 		id++;
 		ID = id;
@@ -54,6 +57,9 @@ public class Peliculas extends Categorias{
 	public String toString() {
 		return  ID + "- " + Nombre + "- " + genero;
 	}
+
+
+
 	
 	
 	
