@@ -3,7 +3,7 @@ import javax.swing.JFrame;
 
 public class Peliculas extends Categorias {
 
-	private final int ID;
+	private static int ID=0;
 	private String Nombre;
 	private Categorias genero;
 	private static int id=0;
@@ -50,6 +50,10 @@ public class Peliculas extends Categorias {
 
 	public int getID() {
 		return ID;
+	}
+	
+	public static int siguienteID() {
+		return ID + 1;
 	}
 
 

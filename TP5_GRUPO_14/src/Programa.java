@@ -35,6 +35,8 @@ public class Programa extends JFrame {
 				contentPane.repaint();
 				contentPane.revalidate();
 				
+				
+				
 			}
 		});
 		mnNewMenu.add(btnAgregar);
