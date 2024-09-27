@@ -64,7 +64,7 @@ public class Agregar extends JPanel {
                     return;
                 }
 				Peliculas aux = new Peliculas(nombre,catSelec);
-				JOptionPane.showMessageDialog(null, aux.toString() + " ha Cargado con exito");
+				JOptionPane.showMessageDialog(null, aux.toString() + " ha sido Cargado con exito");
 				txtNombre.setText("");
 				cbCategorias.setSelectedIndex(0);
 				lblIdpelicula.setText(String.valueOf(Peliculas.siguienteID()));
