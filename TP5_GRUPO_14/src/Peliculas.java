@@ -3,7 +3,7 @@ import javax.swing.JFrame;
 
 public class Peliculas extends Categorias {
 
-	private static int ID=0;
+	private int ID;
 	private String Nombre;
 	private Categorias genero;
 	private static int id=0;
@@ -13,7 +13,7 @@ public class Peliculas extends Categorias {
    Peliculas() {
 		super();
 		id++;
-		ID = id;
+		this.ID = id;
 		Nombre = "Sin Nombre";
 		this.genero = null;
 	}
@@ -53,7 +53,7 @@ public class Peliculas extends Categorias {
 	}
 	
 	public static int siguienteID() {
-		return ID + 1;
+		return id + 1;
 	}
 
 

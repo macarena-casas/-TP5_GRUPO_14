@@ -3,6 +3,9 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
+
+
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -11,6 +14,7 @@ public class Agregar extends JPanel {
 	
 	public JComboBox<Categorias> cbCategorias;
 	private JTextField txtNombre;
+	private DefaultListModel<Peliculas> listModel;
 	/**
 	 * Create the panel.
 	 */
@@ -64,6 +68,7 @@ public class Agregar extends JPanel {
                     return;
                 }
 				Peliculas aux = new Peliculas(nombre,catSelec);
+				listModel.addElement(aux);	
 				JOptionPane.showMessageDialog(null, aux.toString() + " ha sido Cargado con exito");
 				txtNombre.setText("");
 				cbCategorias.setSelectedIndex(0);
@@ -73,5 +78,9 @@ public class Agregar extends JPanel {
 		btnAceptar.setBounds(91, 150, 110, 23);
 		add(btnAceptar);
 		
+	}
+	
+	public void setDefaultListModel(DefaultListModel<Peliculas> listModel) {
+		this.listModel = listModel;
 	}
 }

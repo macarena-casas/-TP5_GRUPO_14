@@ -2,6 +2,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
 
+import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -9,15 +10,19 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import java.awt.event.ActionListener;
+import java.util.Iterator;
+import java.util.TreeSet;
 import java.awt.event.ActionEvent;
 
 public class Programa extends JFrame {
 
 	private JPanel contentPane;
+	private static DefaultListModel<Peliculas> listModel;
 
 
 	public Programa() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		listModel = new DefaultListModel<Peliculas>();
 	
 		setBounds(350, 280, 480, 350);
 		setTitle("Programa");
@@ -35,6 +40,7 @@ public class Programa extends JFrame {
 			
 				contentPane.removeAll();
 				Agregar Panel = new Agregar();
+				Panel.setDefaultListModel(listModel);
 				contentPane.add(Panel);
 				contentPane.repaint();
 				contentPane.revalidate();
@@ -52,6 +58,7 @@ public class Programa extends JFrame {
 				
 				contentPane.removeAll();
 				Listar Panel = new Listar();
+				Panel.setDefaultListModel(listModel);
 				contentPane.add(Panel);
 				contentPane.repaint();
 				contentPane.revalidate();
