@@ -1,8 +1,7 @@
-import javax.swing.JFrame;
 
+public class Peliculas extends Categorias implements Comparable <Peliculas> {
 
-public class Peliculas extends Categorias {
-
+	public static final String Peliculas = null;
 	private int ID;
 	private String Nombre;
 	private Categorias genero;
@@ -63,7 +62,17 @@ public class Peliculas extends Categorias {
 	}
 
 
-
+	@Override
+	public int compareTo(Peliculas o) {
+		int s=o.Nombre.compareTo(this.Nombre);
+		if(s == 0)
+		return 0;
+		
+		if(s < 0) {
+			return 1;
+		}
+		return -1;
+	}
 	
 	
 	
